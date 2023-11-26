@@ -1,0 +1,13 @@
+/* 
+    Guidelines: 
+    -Don't stylize HTLM tags directly, instead use classes or ids in replace or before the tags.
+    e.g.: 
+    
+    .mySection .myDiv p{
+        'some style'
+    }
+    
+    -Don't touch the global selector *{}
+
+    -Use your own media-querys
+*/
