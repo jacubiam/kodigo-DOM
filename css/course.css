@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Roboto&display=swap');
+
 /* 
     Guidelines: 
     -Don't stylize HTLM tags directly, instead use classes or ids in replace or before the tags.
@@ -11,3 +13,178 @@
 
     -Use your own media-querys
 */
+
+
+body {
+    background-color: #219EBC;
+}
+
+.user-info {
+    display: block;
+    color: #023047;
+    max-width: 340px;
+    margin: 5vh auto 0 auto;
+}
+
+.user-info-title{
+    font-family: 'Lato', sans-serif;
+}
+
+.user-info-text{
+    padding: 10px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.user-container {
+    color: #023047;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #FB8500;
+    background-color: #FB8500;
+    border-radius: 8px;
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+.user-collector {
+    margin: 1rem 1rem;
+}
+
+/* Separation for each input division */
+.user-collector div {
+    padding-bottom: 1rem;
+}
+
+/* Width for labels */
+.user-collector label {
+    display: inline-block;
+    width: 86px;
+}
+
+.user-collector input {
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+    color: white;
+}
+
+.user-collector input:hover {
+    border: 1px solid #8ECAE6;
+}
+
+.user-collector input:focus-within {
+    background-color: #219EBC;
+    border: 1px solid #8ECAE6;
+}
+
+.user-name-input,
+.user-email-input {
+    width: 192px;
+}
+
+.user-age-input {
+    width: 30px;
+}
+
+/*User phone styles*/
+.user-phone{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.user-phone-input {
+    align-self: center;
+    width: 120px;
+}
+
+.user-phone-select {
+    align-self: center;
+    color: #023047;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFB703;
+    width: 18px;
+}
+
+.user-phone-country {
+    align-self: center;
+    border-radius: 3px;
+    width: 25px;
+}
+
+/* Button style */
+.user-button {
+    background-color: #023047;
+    /*  border: 1px solid; */
+    border-radius: 3px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.input-error {
+    color: red;
+    font-size: 0.8rem;
+    padding-top: 0.3rem;
+}
+
+/* Timer styles */
+.timer-container {
+    display: none;
+    color: #023047;
+    max-width: 340px;
+    margin: 5vh auto 0 auto;
+}
+
+/* Timer header */
+.timer-info-header {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.timer-info-description {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.timer-info-text{
+    margin: 1rem 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Timer section */
+.timer-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #FB8500;
+    border: 1px solid #FB8500;
+    border-radius: 8px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.timer-data-header {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5rem 0;
+}
+
+.timer-data-value {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#timer-data-text {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+

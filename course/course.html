@@ -1,19 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon, used it as our logo-->    
-    <link rel="shortcut icon" href="https://res.cloudinary.com/dk2oxzxoo/image/upload/v1701031610/kodigo-DOM/Alphabet-K-PNG-Clipart-Background_q9kt2y.png" type="image/x-icon">
+    <!-- Favicon, used it as our logo-->
+    <link rel="shortcut icon"
+        href="https://res.cloudinary.com/dk2oxzxoo/image/upload/v1701031610/kodigo-DOM/Alphabet-K-PNG-Clipart-Background_q9kt2y.png"
+        type="image/x-icon">
     <!-- Main css always at top over others css files-->
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/course.css">
     <!-- The brand of our page -->
     <title>Kourses</title>
 </head>
+
 <body>
-    
+    <main class="user-info" id="user-info-id">
+        <h1 class="user-info-title" id="user-title-id"></h1>
+        <p class="user-info-text">Completa tu inscripción</p>
+    </main>
+    <section class="user-container" id="user-container-id">
+        <div class="user-collector">
+            <div class="user-name">
+                <label for="user-name-input-id">Nombre:</label>
+                <input type="text" class="user-name-input" id="user-name-input-id" placeholder="Nombre" onkeydown="userNameChange()">
+                <p class="input-error" id="user-name-error"></p>
+            </div>
+            <div class="user-age">
+                <label for="user-age-input-id">Edad:</label>
+                <input type="number" class="user-age-input" id="user-age-input-id" onkeydown="userAgeChange()">
+                <p class="input-error" id="user-age-error"></p>
+            </div>
+            <div class="user-phone">
+                <label for="">Teléfono:</label>
+                <select class="user-phone-select" id="user-phone-select-id" onchange="userPhoneLocation()">
+                    <option value="SV">El Salvador</option>
+                    <option value="CO">Colombia</option>
+                    <option value="RD">Rep. Dominicana</option>
+                    <option value="US">EE.UU</option>
+                </select>
+                <img class="user-phone-country" id="user-phone-country-id" src="https://flagcdn.com/w80/sv.png" alt="El Salvador">
+                <input type="tel" class="user-phone-input" id="user-phone-input-id" placeholder="Teléfono" onkeydown="userPhoneChange()">
+                <p class="input-error" id="user-phone-error"></p>
+            </div>
+            <div class="user-email">
+                <label for="user-email-input-id">Correo:</label>
+                <input type="email" class="user-email-input" id="user-email-input-id" placeholder="Correo" onkeydown="userEmailChange()">
+                <p class="input-error" id="user-email-error"></p>
+            </div>
+            <div class="user-password">
+                <label for="user-password-input-id">Contraseña:</label>
+                <input type="password" class="user-password-input" id="user-password-input-id" placeholder="Contraseña" onkeydown="userPasswordChange()">
+                <p class="input-error" id="user-password-error"></p>
+            </div>
+            <button class="user-button" type="submit" onclick="getUser()">Registrarse</button>
+        </div>
+       
+    </section>
+
+    <section class="timer-container" id="timer-container-id">
+        <div class="timer-info">
+            <h2 class="timer-info-header">Felicidades! </h2>
+            <span class="timer-info-description" id="timer-info-description-id"></span>
+            <p class="timer-info-text">Muy pronto nos comunicaremos contigo</p>
+        </div>
+        <div class="timer-data">
+            <h3 class="timer-data-header" id="timer-data-header-id"></h3>
+            <p class="timer-data-value" id="timer-data-value-id"></p>
+            
+        </div>
+        <p id="timer-data-text"></p>
+    </section>
+
     <!-- Course js -->
     <script src="../js/course.js"></script>
 </body>
+
 </html>
