@@ -5,6 +5,22 @@ course = "Matemáticas"
 //Delete This after testing
 
 let user = {}
+let collapsiveSwitch = false;
+const userInfoCollapsive = () => {
+    if (!collapsiveSwitch) {
+        document.getElementById('user-info-more-id').classList.add("user-info-hide")
+        document.getElementById('user-info-list-id').classList.add("user-info-show")
+        document.getElementById('user-info-less-id').classList.add("user-info-show")
+        collapsiveSwitch = true
+    } else {
+        document.getElementById('user-info-more-id').classList.remove("user-info-hide")
+        document.getElementById('user-info-list-id').classList.remove("user-info-show")
+        document.getElementById('user-info-less-id').classList.remove("user-info-show")
+        collapsiveSwitch = false
+    }
+
+   
+}
 
 const userPhoneLocation = () => {
     let userLocation = document.getElementById('user-phone-select-id').value
@@ -25,6 +41,7 @@ const userPhoneLocation = () => {
         default:
             break;
     }
+    return document.getElementById('user-phone-input-id').focus()
 }
 
 //Post error cleaners
@@ -117,8 +134,8 @@ const getUser = () => {
 const timer = () => {
     //Change timer visibility
     document.getElementById('timer-container-id').style.display = "block"
-    document.getElementById('user-container-id').style.display = "none"
-    document.getElementById('user-info-id').style.display = "none"
+    document.getElementById('user-outer-id').style.display = "none"
+    /* document.getElementById('user-info-id').style.display = "none" */
 
     let courseSelect = user.course;
 
@@ -131,27 +148,27 @@ const timer = () => {
     let dateText;
     switch (courseSelect) {
         case "Matemáticas":
-            countDownDate = new Date("Jan 1, 2024 08:00:00").getTime();
+            countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
             dateText = "El 1 de enero de 2024"
             break;
         case "Física":
-            countDownDate = new Date("Feb 1, 2024 08:00:00").getTime();
+            countDownDate = new Date("Feb 1, 2024 00:00:00").getTime();
             dateText = "El 1 de febrero de 2024"
             break;
         case "Medicamento":
-            countDownDate = new Date("Mar 1, 2024 08:00:00").getTime();
+            countDownDate = new Date("Mar 1, 2024 00:00:00").getTime();
             dateText = "El 1 de marzo de 2024"
             break;
         case "Inglés":
-            countDownDate = new Date("Apr 1, 2024 08:00:00").getTime();
+            countDownDate = new Date("Apr 1, 2024 00:00:00").getTime();
             dateText = "El 1 de abril de 2024"
             break;
         case "Tecnología":
-            countDownDate = new Date("May 1, 2024 08:00:00").getTime();
+            countDownDate = new Date("May 1, 2024 00:00:00").getTime();
             dateText = "El 1 de mayo de 2024"
             break;
         case "Ingenieria":
-            countDownDate = new Date("Jun 1, 2024 08:00:00").getTime();
+            countDownDate = new Date("Jun 1, 2024 00:00:00").getTime();
             dateText = "El 1 de junio de 2024"
             break;
         default:
@@ -216,9 +233,6 @@ const isCellNumber = (cell, country) => {
     }
 
     return /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/.test(cell)
-    //RD y USA:       ^((\+|\s)?1(\s|\-)?)?(\(?\d{3}\)?(\s|\-)?)?\d{3}(\s|\-)?\d{4}$
-    //Centro America: ^((\+|\s)?\(?\d{3}\)?(\s|\-)?)?\d{4}(\s|\-)?\d{4}$
-    //Colombia:       ^((\+|\s)?\d{2}(\s|\-)?)?(\(?\d{3}\)?)(\s|\-)?\d{7}$
 }
 
 //Func that detects a standar email string
@@ -226,7 +240,6 @@ const isEmail = (email) => {
     return /^(\w[.-]?)+@\w*(-\w*)?\.\w{2,3}(\.\w{2,3})?$/.test(email)
 }
 
-//Danger Zone
 //If the user access directly to this page and didn't select any course
 const noCourse = () => {
     let undefinedCourse = document.createElement('section')
@@ -241,10 +254,49 @@ const noCourse = () => {
     return document.body.appendChild(undefinedCourse);
 }
 
+const courseInfo = () => {
+    let description, list;
+
+    switch (course) {
+        case "Matemáticas":
+            description = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Qui pariatur ipsam culpa unde aliquam sed quasi accusantium molestiae libero quos, 
+            cupiditate obcaecati id eligendi illo dolores ad odio dolor aut!`
+            list = `
+            <li class="user-info-list-item">Item de lista, un muy util e ingenioso texto de relleno.</li>
+            <li class="user-info-list-item">Item de lista, un muy util e ingenioso texto de relleno.</li>
+            <li class="user-info-list-item">Item de lista, un muy util e ingenioso texto de relleno.</li>
+            <li class="user-info-list-item">Item de lista, un muy util e ingenioso texto de relleno.</li>
+            <li class="user-info-list-item">Item de lista, un muy util e ingenioso texto de relleno.</li>
+            <li class="user-info-list-item">Item de lista, un muy util e ingenioso texto de relleno.</li>
+            `
+            break;
+        case "Física":
+
+            break;
+        case "Medicamento":
+
+            break;
+        case "Inglés":
+
+            break;
+        case "Tecnología":
+
+            break;
+        case "Ingenieria":
+
+            break;
+    }
+
+    document.getElementById("user-title-id").innerHTML = `Has seleccionado ${course}`
+    document.getElementById("user-info-description-id").innerHTML = description
+    document.getElementById("user-info-list-id").innerHTML = `${list}`
+}
+
 if (course == undefined) {
     document.getElementById('user-info-id').innerHTML = ""
-    document.getElementById('user-container-id').innerHTML = ""
+    document.getElementById('user-outer-id').innerHTML = ""
     noCourse();
 } else {
-    document.getElementById("user-title-id").innerHTML = `Has seleccionado ${course}`
+    courseInfo();
 }
