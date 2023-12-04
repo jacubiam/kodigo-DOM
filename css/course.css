@@ -17,6 +17,7 @@ body {
     background-color: #219EBC;
 }
 
+/* Header styles */
 .header-container{
     position: sticky;
     top: 0;
@@ -25,7 +26,7 @@ body {
     background-color: whitesmoke;
     display: flex;
     justify-content: center;
-    height: 50px;
+    height: 60px;
 }
 
 .header-content {
@@ -46,6 +47,7 @@ body {
     font-size: 1.5em;
 }
 
+/* Main info styles */
 .main-container {
     margin: 0 auto;
     display: flex;
@@ -55,7 +57,6 @@ body {
     margin-bottom: 5vh;
 }
 
-/* Main info styles */
 .user-info {
     color: #023047;
     max-width: 340px;
@@ -67,7 +68,7 @@ body {
 }
 
 .user-info-description {
-    margin: 1em 0;
+    margin: 1.5em 0 2em;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -123,7 +124,7 @@ body {
 }
 
 .user-outer-text {
-    padding: 10px 0;
+    margin: 2em 0 1em;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -290,9 +291,17 @@ body {
     border: 1px solid transparent;
     border-radius: 8px;
     background-color: #023047;
+    color: white;
+}
+
+.footer-content {
     display: flex;
+    margin-top: 0.6em;
     justify-content: center;
-    height: 50px;
+}
+
+.footer-container img {
+    height: 2em;
 }
 
 .footer-content-logo {
@@ -304,8 +313,60 @@ body {
     margin-left: 0.3em;
     align-self: center;
     font-family: 'Lato', sans-serif;
-    color: white;
     font-size: 1.5em;
+}
+
+.footer-authors {
+    margin: 1em 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-authors-label {
+    margin-top: 1em;
+}
+
+.footer-authors img {
+    margin: 0.6em 0.3em 0.3em;
+}
+
+.footer-copyright {
+    margin-top: 1em;
+    font-size: 0.8em;
+}
+
+/* Undefined course styles*/
+.course-undefined {
+    display: flex;
+    flex-wrap: wrap;
+    height: 70vh;
+    justify-content: center;
+    align-content: center;
+}
+
+.course-undefined-info {
+    max-width: 576px;
+    background-color: #FB8500;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #023047;
+    text-align: center;
+    padding: 2em;
+    margin: 0 0.6em;
+}
+
+.course-undefined-title {
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 1em;
+}
+
+.course-undefined-link {
+    background-color: #023047;
+    border-radius: 8px;
+    padding: 0.8em;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: white;
 }
 
 input::-webkit-outer-spin-button,
@@ -314,8 +375,13 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+/* Media queries */
 @media screen and (min-width:576px){
-    .user-info{
+    .header-container, .footer-container {
+        font-size: 1.1rem;
+    }
+    
+    .user-info {
         max-width: 576px;
         font-size: 1.1rem;
     }
@@ -344,11 +410,15 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (min-width:768px) {
+    .header-container, .footer-container {
+        font-size: 1.2rem;
+    }
+
     .main-container {
         justify-content: space-around;
     }
 
-    .user-info{
+    .user-info {
         max-width: 364px;
         font-size: 1.2rem;
     }
@@ -376,10 +446,18 @@ input::-webkit-inner-spin-button {
         max-width: 364px;
         font-size: 1.2rem;
     }
+
+    .course-undefined-info {
+        max-width: none;
+    }
 }
 
 @media screen and (min-width:992px) {
-    .user-info{
+    .header-container, .footer-container {
+        font-size: 1.3rem;
+    }
+    
+    .user-info {
         max-width: 384px;
         font-size: 1.3rem;
     }

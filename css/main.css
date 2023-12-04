@@ -17,3 +17,102 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Header styles */
+.header-container{
+    position: sticky;
+    top: 0;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+
+.header-content {
+    display: flex;
+    width: 90%;
+}
+
+.header-content-logo {
+    align-self: center;
+    height: 60%;
+}
+
+.header-content-title {
+    margin-left: 0.3em;
+    align-self: center;
+    font-family: 'Lato', sans-serif;
+    color: #023047;
+    font-size: 1.5em;
+}
+
+/* Footer styles */
+.footer-container{
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: #023047;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    margin-top: 0.6em;
+    justify-content: center;
+}
+
+.footer-container img {
+    height: 2em;
+}
+
+.footer-content-logo {
+    align-self: center;
+    height: 60%;
+}
+
+.footer-content-title {
+    margin-left: 0.3em;
+    align-self: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+}
+
+.footer-authors {
+    margin: 1em 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-authors-label {
+    margin-top: 1em;
+}
+
+.footer-authors img {
+    margin: 0.6em 0.3em 0.3em;
+}
+
+.footer-copyright {
+    margin-top: 1em;
+    font-size: 0.8em;
+}
+
+/* Media queries */
+@media screen and (min-width:576px){
+    .header-container, .footer-container {
+        font-size: 1.1rem;
+    }
+    
+}
+
+@media screen and (min-width:768px) {
+    .header-container, .footer-container {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .header-container, .footer-container {
+        font-size: 1.3rem;
+    }
+}

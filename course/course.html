@@ -16,9 +16,11 @@
 </head>
 
 <body>
-    <header class="header-container">
+    <header class="header-container" id="header-container-id">
         <div class="header-content">
-            <img class="header-content-logo" src="https://res.cloudinary.com/dk2oxzxoo/image/upload/v1701031610/kodigo-DOM/Alphabet-K-PNG-Clipart-Background_q9kt2y.png" alt="logo">
+            <img class="header-content-logo"
+                src="https://res.cloudinary.com/dk2oxzxoo/image/upload/v1701031610/kodigo-DOM/Alphabet-K-PNG-Clipart-Background_q9kt2y.png"
+                alt="logo">
             <span class="header-content-title">Kourses</span>
         </div>
     </header>
@@ -36,7 +38,8 @@
                 <div class="user-collector">
                     <div class="user-name">
                         <label for="user-name-input-id">Nombre:</label>
-                        <input type="text" class="user-name-input" id="user-name-input-id" placeholder="Nombre" onkeydown="userNameChange()">
+                        <input type="text" class="user-name-input" id="user-name-input-id" placeholder="Nombre"
+                            onkeydown="userNameChange()">
                         <p class="input-error" id="user-name-error"></p>
                     </div>
                     <div class="user-age">
@@ -52,25 +55,29 @@
                             <option value="RD">Rep. Dominicana</option>
                             <option value="US">EE.UU</option>
                         </select>
-                        <img class="user-phone-country" id="user-phone-country-id" src="https://flagcdn.com/w80/sv.png" alt="El Salvador">
-                        <input type="tel" class="user-phone-input" id="user-phone-input-id" placeholder="Teléfono" onkeydown="userPhoneChange()">
+                        <img class="user-phone-country" id="user-phone-country-id" src="https://flagcdn.com/w80/sv.png"
+                            alt="El Salvador">
+                        <input type="tel" class="user-phone-input" id="user-phone-input-id" placeholder="Teléfono"
+                            onkeydown="userPhoneChange()">
                         <p class="input-error" id="user-phone-error"></p>
                     </div>
                     <div class="user-email">
                         <label for="user-email-input-id">Correo:</label>
-                        <input type="email" class="user-email-input" id="user-email-input-id" placeholder="Correo" onkeydown="userEmailChange()">
+                        <input type="email" class="user-email-input" id="user-email-input-id" placeholder="Correo"
+                            onkeydown="userEmailChange()">
                         <p class="input-error" id="user-email-error"></p>
                     </div>
                     <div class="user-password">
                         <label for="user-password-input-id">Contraseña:</label>
-                        <input type="password" class="user-password-input" id="user-password-input-id" placeholder="Contraseña" onkeydown="userPasswordChange()">
+                        <input type="password" class="user-password-input" id="user-password-input-id"
+                            placeholder="Contraseña" onkeydown="userPasswordChange()">
                         <p class="input-error" id="user-password-error"></p>
                     </div>
                     <button class="user-button" type="submit" onclick="getUser()">Registrarse</button>
-                </div> 
+                </div>
             </div>
         </section>
-    
+
         <section class="timer-container" id="timer-container-id">
             <div class="timer-info">
                 <h2 class="timer-info-header">Felicidades! </h2>
@@ -80,17 +87,32 @@
             <div class="timer-data">
                 <h3 class="timer-data-header" id="timer-data-header-id"></h3>
                 <p class="timer-data-value" id="timer-data-value-id"></p>
-                
+
             </div>
             <p id="timer-data-text"></p>
         </section>
     </div>
-   <footer class="footer-container">
+    <footer class="footer-container">
         <div class="footer-content">
-            <img class="footer-content-logo" src="https://res.cloudinary.com/dk2oxzxoo/image/upload/v1701031610/kodigo-DOM/Alphabet-K-PNG-Clipart-Background_q9kt2y.png" alt="logo">
+            <img class="footer-content-logo"
+                src="https://res.cloudinary.com/dk2oxzxoo/image/upload/v1701031610/kodigo-DOM/Alphabet-K-PNG-Clipart-Background_q9kt2y.png"
+                alt="logo">
             <span class="footer-content-title">Kourses</span>
         </div>
-   </footer>
+        <div class="footer-authors">
+            <p class="footer-authors-label">Autores</p>
+            <a href="https://github.com/jacubiam/jacubiam"><img
+                    src="https://res.cloudinary.com/dk2oxzxoo/image/upload/v1701715907/github-mark-white_gvhj4i.png"
+                    alt="GitHub-Logo"></a>
+            <a href="https://github.com/MarceeeO"><img
+                    src="https://res.cloudinary.com/dk2oxzxoo/image/upload/v1701715907/github-mark-white_gvhj4i.png"
+                    alt="GitHub-Logo"></a>
+            <p class="footer-authors-label">Timer Snippet</p>
+            <a href="https://www.w3schools.com/howto/howto_js_countdown.asp"><img
+                    src="https://logospng.org/download/w3schools/w3schools-2048.png" alt="W3S-Logo"></a>
+            <p class="footer-copyright">©2023 Copyright Kourses. Todos los derechos reservados</p>
+        </div>
+    </footer>
 
     <!-- Course js -->
     <script src="../js/course.js"></script>

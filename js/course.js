@@ -1,8 +1,5 @@
 let course = localStorage.getItem("value");
 localStorage.removeItem("value");
-//Delete This afeter testing
-course = "Matemáticas"
-//Delete This after testing
 
 let user = {}
 let collapsiveSwitch = false;
@@ -18,10 +15,9 @@ const userInfoCollapsive = () => {
         document.getElementById('user-info-less-id').classList.remove("user-info-show")
         collapsiveSwitch = false
     }
-
-   
 }
 
+//Change the flag based on phone country
 const userPhoneLocation = () => {
     let userLocation = document.getElementById('user-phone-select-id').value
     let flag = document.getElementById('user-phone-country-id')
@@ -61,6 +57,7 @@ const userPasswordChange = () => {
     return document.getElementById('user-password-error').innerHTML = ""
 }
 
+//Get data form inputs
 const getUser = () => {
     let inputFields = document.querySelectorAll('.user-collector input')
     let emptyFormat = ""
@@ -82,6 +79,7 @@ const getUser = () => {
             return document.getElementById('user-password-error').innerHTML = emptyFormat;
     }
 
+     //Validate all inputs
     if (onlyLetters(inputFields[0].value.trim())) {
         user.name = inputFields[0].value.trim()
     } else {
@@ -128,6 +126,7 @@ const getUser = () => {
     user.password = inputFields[4].value.trim()
     user.course = course;
 
+    //If all it's correct, launch a timer
     return timer();
 }
 
@@ -135,7 +134,6 @@ const timer = () => {
     //Change timer visibility
     document.getElementById('timer-container-id').style.display = "block"
     document.getElementById('user-outer-id').style.display = "none"
-    /* document.getElementById('user-info-id').style.display = "none" */
 
     let courseSelect = user.course;
 
@@ -198,11 +196,11 @@ const timer = () => {
         // If the count down is finished, write some text
         if (distance < 0) {
             clearInterval(time);
-            document.getElementById("timer-data-value-id").innerHTML = "Finalizado";
+            return document.getElementById("timer-data-value-id").innerHTML = "Finalizado";
         }
     }, 1000);
 
-    document.getElementById('timer-data-text').innerHTML = dateText
+    return document.getElementById('timer-data-text').innerHTML = dateText
 }
 
 
@@ -251,48 +249,85 @@ const noCourse = () => {
         <a class="course-undefined-link" href="../index.html">Volver</a>
     </div>
     `
-    return document.body.appendChild(undefinedCourse);
+    return document.getElementById('header-container-id').after(undefinedCourse)
 }
 
+//Print course related info
 const courseInfo = () => {
     let description, list;
 
+    //Print the info
     switch (course) {
         case "Matemáticas":
-            description = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Qui pariatur ipsam culpa unde aliquam sed quasi accusantium molestiae libero quos, 
-            cupiditate obcaecati id eligendi illo dolores ad odio dolor aut!`
+            description = `En este curso, los estudiantes pueden esperar aprender temas como cálculo, álgebra lineal, teoría de números, geometría diferencial, análisis complejo y ecuaciones diferenciales. Los estudiantes también pueden esperar trabajar en proyectos de investigación y resolver problemas matemáticos desafiantes.`
             list = `
-            <li class="user-info-list-item">Item de lista, un muy util e ingenioso texto de relleno.</li>
-            <li class="user-info-list-item">Item de lista, un muy util e ingenioso texto de relleno.</li>
-            <li class="user-info-list-item">Item de lista, un muy util e ingenioso texto de relleno.</li>
-            <li class="user-info-list-item">Item de lista, un muy util e ingenioso texto de relleno.</li>
-            <li class="user-info-list-item">Item de lista, un muy util e ingenioso texto de relleno.</li>
-            <li class="user-info-list-item">Item de lista, un muy util e ingenioso texto de relleno.</li>
+            <li class="user-info-list-item">Profundidad en conceptos matemáticos complejos.</li>
+            <li class="user-info-list-item">Proyectos de investigación y problemas matemáticos desafiantes.</li>
+            <li class="user-info-list-item">Desarrollo de pensamiento crítico.</li>
+            <li class="user-info-list-item">Preparación para carreras en matemáticas, ciencias, ingeniería o finanzas.</li>
+            <li class="user-info-list-item">Flexibilidad en recursos y ritmo de aprendizaje.</li>
             `
             break;
         case "Física":
-
+            description = `En este curso, los estudiantes pueden esperar aprender temas como mecánica newtoniana, trabajo, energía y potencia, ondas mecánicas y sonido, y una introducción a circuitos simples. Los estudiantes también pueden esperar trabajar en proyectos de investigación y resolver problemas de física desafiantes.`
+            list = `
+            <li class="user-info-list-item">Profundidad en conceptos físicos complejos.</li>
+            <li class="user-info-list-item">Proyectos de investigación y problemas físicos desafiantes.</li>
+            <li class="user-info-list-item">Desarrollo de pensamiento crítico.</li>
+            <li class="user-info-list-item">Preparación para carreras en física, ciencias, ingeniería o finanzas.</li>
+            <li class="user-info-list-item">Flexibilidad en recursos y ritmo de aprendizaje.</li>
+            `
             break;
         case "Medicamento":
-
+            description = `En este curso, los estudiantes pueden esperar aprender temas como farmacocinética, farmacodinamia, toxicología, farmacogenómica, farmacovigilancia y farmacoeconomía. Los estudiantes también pueden esperar trabajar en proyectos de investigación y resolver problemas de farmacología desafiantes.`
+            list = `
+            <li class="user-info-list-item">Profundidad en conceptos farmacológicos complejos.</li>
+            <li class="user-info-list-item">Proyectos de investigación y problemas farmacológicos desafiantes.</li>
+            <li class="user-info-list-item">Desarrollo de pensamiento crítico.</li>
+            <li class="user-info-list-item">Preparación para carreras en farmacología, ciencias o ingeniería.</li>
+            <li class="user-info-list-item">Flexibilidad en recursos y ritmo de aprendizaje.</li>
+            `
             break;
         case "Inglés":
-
+            description = `En este curso, los estudiantes pueden esperar aprender temas como gramática avanzada, vocabulario avanzado, comprensión auditiva avanzada, comprensión lectora avanzada y expresión oral avanzada. Los estudiantes también pueden esperar trabajar en proyectos de investigación y resolver problemas de inglés desafiantes.`
+            list = `
+            <li class="user-info-list-item">Profundidad en conceptos inglés complejos.</li>
+            <li class="user-info-list-item">Proyectos de investigación y problemas de inglés desafiantes.</li>
+            <li class="user-info-list-item">Desarrollo de pensamiento crítico.</li>
+            <li class="user-info-list-item">Preparación para carreras en inglés.</li>
+            <li class="user-info-list-item">Flexibilidad en recursos y ritmo de aprendizaje.</li>
+            `
             break;
         case "Tecnología":
-
+            description = `En este curso, los estudiantes pueden esperar aprender temas como inteligencia artificial, aprendizaje automático, ciencia de datos, ciberseguridad, redes de computadoras y sistemas operativos avanzados. Los estudiantes también pueden esperar trabajar en proyectos de investigación y resolver problemas tecnológicos desafiantes.`
+            list = `
+            <li class="user-info-list-item">Profundidad en conceptos tecnología complejos.</li>
+            <li class="user-info-list-item">Proyectos de investigación y problemas tecnológicos desafiantes.</li>
+            <li class="user-info-list-item">Desarrollo de pensamiento crítico.</li>
+            <li class="user-info-list-item">Preparación para carreras en tecnología, ciencias o ingeniería.</li>
+            <li class="user-info-list-item">Flexibilidad en recursos y ritmo de aprendizaje.</li>
+            `
             break;
-        case "Ingenieria":
-
+        case "Ingeniería":
+            description = `En este curso, los estudiantes pueden esperar aprender temas como mecánica de materiales, termodinámica, dinámica de fluidos, análisis estructural, diseño de sistemas y control de calidad. Los estudiantes también pueden esperar trabajar en proyectos de investigación y resolver problemas de ingeniería desafiantes.`
+            list = `
+            <li class="user-info-list-item">Profundidad en conceptos de ingeniería complejos.</li>
+            <li class="user-info-list-item">Proyectos de investigación y problemas de ingeniería desafiantes.</li>
+            <li class="user-info-list-item">Desarrollo de pensamiento crítico.</li>
+            <li class="user-info-list-item">Preparación para carreras en ciencias o ingeniería.</li>
+            <li class="user-info-list-item">Flexibilidad en recursos y ritmo de aprendizaje.</li>
+            `
             break;
     }
 
     document.getElementById("user-title-id").innerHTML = `Has seleccionado ${course}`
     document.getElementById("user-info-description-id").innerHTML = description
     document.getElementById("user-info-list-id").innerHTML = `${list}`
+
+    return false
 }
 
+//All start here, if everything is good, print data, otherwise a return window
 if (course == undefined) {
     document.getElementById('user-info-id').innerHTML = ""
     document.getElementById('user-outer-id').innerHTML = ""
