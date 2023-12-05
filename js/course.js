@@ -79,7 +79,7 @@ const getUser = () => {
             return document.getElementById('user-password-error').innerHTML = emptyFormat;
     }
 
-     //Validate all inputs
+    //Validate all inputs
     if (onlyLetters(inputFields[0].value.trim())) {
         user.name = inputFields[0].value.trim()
     } else {
@@ -165,7 +165,7 @@ const timer = () => {
             countDownDate = new Date("May 1, 2024 00:00:00").getTime();
             dateText = "El 1 de mayo de 2024"
             break;
-        case "Ingenieria":
+        case "Ingeniería":
             countDownDate = new Date("Jun 1, 2024 00:00:00").getTime();
             dateText = "El 1 de junio de 2024"
             break;

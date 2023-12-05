@@ -1,35 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon, used it as our logo-->    
-    <link rel="shortcut icon" href="https://res.cloudinary.com/dk2oxzxoo/image/upload/v1701031610/kodigo-DOM/Alphabet-K-PNG-Clipart-Background_q9kt2y.png" type="image/x-icon">
+    <!-- Favicon, used it as our logo-->
+    <link rel="shortcut icon"
+        href="https://res.cloudinary.com/dk2oxzxoo/image/upload/v1701031610/kodigo-DOM/Alphabet-K-PNG-Clipart-Background_q9kt2y.png"
+        type="image/x-icon">
     <!-- Main css always at top over others css files-->
     <link rel="stylesheet" href="./css/main.css">
     <!-- The brand of our page -->
     <title>Kourses</title>
 </head>
+
 <body>
     <header class="header-container" id="header-container-id">
         <div class="header-content">
             <img class="header-content-logo"
                 src="https://res.cloudinary.com/dk2oxzxoo/image/upload/v1701031610/kodigo-DOM/Alphabet-K-PNG-Clipart-Background_q9kt2y.png"
                 alt="logo">
-            <span class="header-content-title">Kourses</span>
+            <a href="./index.html" class="header-content-title">Kourses</a>
         </div>
     </header>
-
+    <main class="cards-container">
+        <div class="cards-boundaries">
+            <div class="cards-content">
+                <div class="cards-content-info" id="cards-math">
+                    <a href="./course/course.html" onclick="courseChoice(this)">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5332/5332610.png" alt="Math">
+                        <p>Matemáticas</p>
+                    </a>
+                </div>
+                <div class="cards-content-info" id="cards-physics">
+                    <a href="./course/course.html" onclick="courseChoice(this)">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1467/1467187.png" alt="Physics">
+                        <p>Física</p>
+                    </a>
+                </div>
+                <div class="cards-content-info" id="cards-meds">
+                    <a href="./course/course.html" onclick="courseChoice(this)">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5200/5200746.png" alt="Meds">
+                        <p>Medicamento</p>
+                    </a>
+                </div>
+                <div class="cards-content-info" id="cards-english">
+                    <a href="./course/course.html" onclick="courseChoice(this)">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1377/1377975.png" alt="English">
+                        <p>Inglés</p>
+                    </a>
+                </div>
+                <div class="cards-content-info" id="cards-tech">
+                    <a href="./course/course.html" onclick="courseChoice(this)">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4365/4365271.png" alt="Tech">
+                        <p>Tecnología</p>
+                    </a>
+                </div>
+                <div class="cards-content-info" id="cards-engineer">
+                    <a href="./course/course.html" onclick="courseChoice(this)">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3079/3079166.png" alt="Engineer">
+                        <p>Ingeniería</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
     <footer class="footer-container">
         <div class="footer-content">
-            <img class="footer-content-logo"
-                src="https://res.cloudinary.com/dk2oxzxoo/image/upload/v1701031610/kodigo-DOM/Alphabet-K-PNG-Clipart-Background_q9kt2y.png"
-                alt="logo">
-            <span class="footer-content-title">Kourses</span>
+            <a href="./index.html"><img class="footer-content-logo"
+                    src="https://res.cloudinary.com/dk2oxzxoo/image/upload/v1701031610/kodigo-DOM/Alphabet-K-PNG-Clipart-Background_q9kt2y.png"
+                    alt="logo"></a>
+            <a href="./index.html" class="footer-content-title">Kourses</a>
         </div>
         <div class="footer-authors">
             <p class="footer-authors-label">Autores</p>
-            <a href="https://github.com/jacubiam/jacubiam"><img
+            <a href="https://github.com/jacubiam"><img
                     src="https://res.cloudinary.com/dk2oxzxoo/image/upload/v1701715907/github-mark-white_gvhj4i.png"
                     alt="GitHub-Logo"></a>
             <a href="https://github.com/MarceeeO"><img
@@ -45,4 +90,5 @@
     <!-- Main js -->
     <script src="./js/main.js"></script>
 </body>
+
 </html>
