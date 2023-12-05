@@ -19,6 +19,7 @@
     box-sizing: border-box;
 }
 
+/* Body styles, only add background-color */
 body {
     background-color: #219EBC;
 }
@@ -53,6 +54,7 @@ body {
     color: #023047;
     font-size: 1.5em;
 }
+/* Ends header styles */
 
 /* Card for courses */
 .cards-container {
@@ -95,6 +97,7 @@ body {
     text-decoration: none;
     color: white;
 }
+/* Ends card styles */
 
 /* Footer styles */
 .footer-container {
@@ -146,6 +149,7 @@ body {
     margin-top: 1em;
     font-size: 0.8em;
 }
+/* Ends footer styles */
 
 /* Media queries */
 @media screen and (min-width:576px) {

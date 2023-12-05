@@ -1,7 +1,7 @@
+//On card click, gets user choice and stores the value in the browser
 const courseChoice = (paren) => {
     let course = paren.parentElement.id
     let courseValue;
-    console.log(course);
 
     switch (course) {
         case "cards-math":
@@ -23,6 +23,6 @@ const courseChoice = (paren) => {
             courseValue = "Ingeniería"
             break;
     }
-
+    //Stores the value
     return localStorage.setItem("value", courseValue)
 }

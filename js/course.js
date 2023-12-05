@@ -1,7 +1,11 @@
+//On load, gets the user previous choice
 let course = localStorage.getItem("value");
 localStorage.removeItem("value");
 
+//Object user
 let user = {}
+
+//See more feature (Mobile only)
 let collapsiveSwitch = false;
 const userInfoCollapsive = () => {
     if (!collapsiveSwitch) {
@@ -229,8 +233,6 @@ const isCellNumber = (cell, country) => {
         case "US":
             return /^((\+|\s)?1(\s|\-)?)?(\(?\d{3}\)?(\s|\-)?)?\d{3}(\s|\-)?\d{4}$/.test(cell)
     }
-
-    return /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/.test(cell)
 }
 
 //Func that detects a standar email string

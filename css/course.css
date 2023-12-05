@@ -82,6 +82,7 @@
 .user-info-hide {
     display: none;
 }
+/* Ends main info styles */
 
 /* Form styles */
 .user-outer {
@@ -106,12 +107,10 @@
     margin: 1em 1em;
 }
 
-/* Separation for each input division */
 .user-collector div {
     padding-bottom: 1em;
 }
 
-/* Width for labels */
 .user-collector label {
     display: inline-block;
     width: 5.5em;
@@ -192,6 +191,7 @@
     font-size: 0.8em;
     padding-top: 0.3em;
 }
+/* Ends form styles */
 
 /* Timer styles */
 .timer-container {
@@ -252,6 +252,7 @@
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
+/* Ends timer styles */
 
 /* Undefined course styles*/
 .course-undefined {
@@ -286,7 +287,9 @@
     font-family: 'Poppins', sans-serif;
     color: white;
 }
+/* Ends course styles */
 
+/* Misc styles */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
